@@ -108,8 +108,30 @@ def find_duplicates(tuple_in: Tuple) -> List:
     for i in tuple_in:
         if i not in a:
             a.append(i)
-        else:
+        elif i not in dup:
             dup.append(i)
-    return dup
+    dup2 = sorted(dup)
+    return dup2
 
-print('This needs work')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
