@@ -111,3 +111,5 @@ def find_duplicates(tuple_in: Tuple) -> List:
         else:
             dup.append(i)
     return dup
+
+print('This needs work')
