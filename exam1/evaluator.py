@@ -11,7 +11,7 @@ def find_lowest_value(list_in: List[N]) -> N:
     :param list_in: A list of numbers (integers and/or floats)
     :return: The lowest number in the list
     """
-    pass  # implement me
+    return min(list_in)
 
 
 def find_highest_value(list_in: List[N]) -> N:
@@ -21,7 +21,7 @@ def find_highest_value(list_in: List[N]) -> N:
     :param list_in: A list of numbers (integers and/or floats)
     :return: The highest number in the list
     """
-    pass  # implement me
+    return max(list_in)
 
 
 def find_value(value_to_find, values: C) -> int:
@@ -34,7 +34,10 @@ def find_value(value_to_find, values: C) -> int:
     :param values: A List or a Set.
     :return: an integer. Either the index where the value exists or -1
     """
-    pass  # implement me
+    if value_to_find in values:
+        return values.index(value_to_find)
+    else:
+        return -1
 
 
 def compare_two_numbers(a: N, b: N) -> int:
@@ -49,7 +52,12 @@ def compare_two_numbers(a: N, b: N) -> int:
     :param b: The second number.
     :return: an integer 0, 1, or -1
     """
-    pass  # implement me
+    if a == b:
+        return 0
+    elif a > b:
+        return 1
+    else:
+        return -1
 
 
 def compare_two_strings(a: str, b: str) -> int:
@@ -64,7 +72,12 @@ def compare_two_strings(a: str, b: str) -> int:
     :param b: The second string.
     :return: an integer 0, 1, or -1
     """
-    pass  # implement me
+    if len(a) == len(b):
+        return 0
+    elif len(a)>len(b):
+        return 1
+    else:
+        return -1
 
 
 def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
@@ -75,7 +88,12 @@ def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
     :param tuple_b: The second tuple.
     :return: A set containing items common on both tuples.
     """
-    pass  # implement me
+    list1 = []
+    for i in tuple_a:
+        for j in tuple_b:
+            if i == j:
+                list1.append(i)
+    return set(list1)
 
 
 def find_duplicates(tuple_in: Tuple) -> List:
@@ -85,4 +103,11 @@ def find_duplicates(tuple_in: Tuple) -> List:
     :param tuple_in: A tuple
     :return: a A list containing duplicate items in the tuple_in parameter
     """
-    pass  # implement me
+    a = []
+    dup = []
+    for i in tuple_in:
+        if i not in a:
+            a.append(i)
+        else:
+            dup.append(i)
+    return dup
