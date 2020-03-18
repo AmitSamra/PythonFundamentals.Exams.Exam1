@@ -103,6 +103,7 @@ def find_duplicates(tuple_in: Tuple) -> List:
     :param tuple_in: A tuple
     :return: a A list containing duplicate items in the tuple_in parameter
     """
+    '''
     a = []
     dup = []
     for i in tuple_in:
@@ -112,5 +113,19 @@ def find_duplicates(tuple_in: Tuple) -> List:
             dup.append(i)
     dup2 = sorted(dup)
     return dup2
+    '''
+    a = {}
+    for i in tuple_in:
+        total = 0
+        for j in tuple_in:
+            if i == j:
+                total += 1
+        a[i] = total
+    b = []
+    for key, value in a.items():
+        if value > 1:
+            b.append(key)
+    return b
+
 
 # Exercise 2
