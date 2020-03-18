@@ -45,4 +45,4 @@ def miles_to_kilometers(miles: float) -> float:
     """
     return round(miles*1.60934,2)
 
-
+# Exercise 1
