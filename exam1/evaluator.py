@@ -113,25 +113,4 @@ def find_duplicates(tuple_in: Tuple) -> List:
     dup2 = sorted(dup)
     return dup2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Exercise 2
