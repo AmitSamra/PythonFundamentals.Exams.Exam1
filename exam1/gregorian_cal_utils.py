@@ -13,3 +13,5 @@ def is_leap_year(year: int) -> bool:
         return True
     else:
         return False
+
+# Exercise 3
