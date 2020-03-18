@@ -26,3 +26,5 @@ def generate_list_with_strategy(start: int, stop: int, step: int, strategy: Call
     """
     a = [strategy(x) for x in range(start, stop, step)]
     return a
+
+# Exercise 4
